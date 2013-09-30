@@ -1,7 +1,15 @@
 $(document).ready(function() {
 	$('#when').datepicker({ format: 'yyyy-mm-dd', todayHighlight: true });
+	$('#find').on('click', function(e) {
+		e.preventDefault();
+		console.dir({
+			vehicle: $('#which').val(),
+			when: $('#where').val(),
+			where: where
+		});
+	});
 
-	var coords = {
+	var where = {
 		lat: 0,
 		lng: 0
 	};
@@ -9,10 +17,10 @@ $(document).ready(function() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(
 			function successCallback(pos) {
-				coords.lat = pos.coords.latitude;
-				coords.lng = pos.coords.longitude;
+				where.lat = pos.coords.latitude;
+				where.lng = pos.coords.longitude;
 
-				initMap(coords, 'map');
+				initMap(where, 'map');
 			},
 			function errorCallback(error) { 
 				switch(error.code) {

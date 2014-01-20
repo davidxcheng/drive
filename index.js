@@ -24,5 +24,5 @@ app.get('/', function(req, res){
 });
 
 http.createServer(app).listen(4500, function(){
-	console.log('Listening on port 45000');
+	console.log('Listening on port 4500');
 });

@@ -20,7 +20,9 @@ $(document).ready(function() {
 				where.lat = pos.coords.latitude;
 				where.lng = pos.coords.longitude;
 
-				initMap(where, 'map');
+				$.getJSON('fake/service-stations.json', function(stations) {
+					initMap(where, stations, 'map');
+				});
 			},
 			function errorCallback(error) { 
 				switch(error.code) {
@@ -41,17 +43,25 @@ $(document).ready(function() {
 			});
 	}
 
-	function initMap(coords, selector) {
+	function initMap(youAreHere, markers, selector) {
 		var options = {
-			center: new google.maps.LatLng(coords.lat, coords.lng),
+			center: new google.maps.LatLng(youAreHere.lat, youAreHere.lng),
 			zoom: 14,
 			mapTypeId: google.maps.MapTypeId.MAP // MAP | SATTELITE
 		};
 		
 		var map = new google.maps.Map(document.getElementById(selector), options);
 		new google.maps.Marker({
-			position: new google.maps.LatLng(coords.lat, coords.lng),
+			position: new google.maps.LatLng(youAreHere.lat, youAreHere.lng),
 			map: map
 		});
+
+		markers.forEach(function(marker) {
+			new google.maps.Marker({
+				title: marker.title,
+				position: new google.maps.LatLng(marker.lat, marker.lng),
+				map: map
+			});
+		})
 	};
 });

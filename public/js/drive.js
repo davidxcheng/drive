@@ -43,7 +43,7 @@ $(document).ready(function() {
 			});
 	}
 
-	function initMap(youAreHere, markers, selector) {
+	function initMap(youAreHere, stations, selector) {
 		var options = {
 			center: new google.maps.LatLng(youAreHere.lat, youAreHere.lng),
 			zoom: 14,
@@ -58,15 +58,17 @@ $(document).ready(function() {
 
 		var markerIcon = 'img/trade-marker.png';
 
-		markers.forEach(function(marker) {
-			new google.maps.Marker({
-				title: marker.title,
-				icon: markerIcon
-				,
-				shape: shape,
+		stations.forEach(function(station) {
+			var marker = new google.maps.Marker({
+				title: station.title,
+				icon: markerIcon,
 				animation: google.maps.Animation.DROP,
-				position: new google.maps.LatLng(marker.lat, marker.lng),
+				position: new google.maps.LatLng(station.lat, station.lng),
 				map: map
+			});
+
+			google.maps.event.addListener(marker, 'click', function(e) {
+				console.log(station.id);
 			});
 		})
 	};

@@ -1,10 +1,12 @@
 [{
-	"title": "Dekra Solnav",
+	"id": 1000,
+	"title": "Dekra Solnavägen 15",
 	"lat": 59.352929,
 	"lng": 18.017071
  }, 
  {
- 	"title": "Dekra ",
+ 	"id": 1001,
+ 	"title": "Dekra Hemvärnsgatan 11",
  	"lat": 59.353904, 
  	"lng": 17.976492
  }]

@@ -56,9 +56,15 @@ $(document).ready(function() {
 			map: map
 		});
 
+		var markerIcon = 'img/trade-marker.png';
+
 		markers.forEach(function(marker) {
 			new google.maps.Marker({
 				title: marker.title,
+				icon: markerIcon
+				,
+				shape: shape,
+				animation: google.maps.Animation.DROP,
 				position: new google.maps.LatLng(marker.lat, marker.lng),
 				map: map
 			});

@@ -1,18 +1,18 @@
 @import url("reset.css");
-#main {
-  max-width: 400px;
-}
-#main {
-  margin: 20px auto;
-}
-#which {
-  text-transform: uppercase;
-  text-align: center;
-}
-#when {
-  text-align: center;
+main {
+  position: relative;
 }
 #map {
   width: 100%;
   height: 480px;
+}
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #000;
+}
+.hide {
+  display: none !important;
 }

@@ -1,14 +1,5 @@
 $(document).ready(function() {
-	$('#when').datepicker({ format: 'yyyy-mm-dd', todayHighlight: true });
-	$('#find').on('click', function(e) {
-		e.preventDefault();
-		console.dir({
-			vehicle: $('#which').val(),
-			when: $('#where').val(),
-			where: where
-		});
-	});
-
+	
 	var where = {
 		lat: 0,
 		lng: 0
@@ -68,8 +59,12 @@ $(document).ready(function() {
 			});
 
 			google.maps.event.addListener(marker, 'click', function(e) {
-				console.log(station.id);
+				showStationDetails(station.id);
 			});
 		})
 	};
+
+	function showStationDetails(stationId) {
+		console.log(stationId);
+	}
 });

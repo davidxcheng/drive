@@ -8,19 +8,11 @@ head
 	link(rel='stylesheet', href='/css/drive.css')
 body
 	
-	#main
-		form(role='form')
-			.form-group
-				input.form-control(type='text', id='which', placeholder='ABC 123', autofocus='autofocus')
-
-			.form-group
-				input.form-control(type='text', id='when', data-toggle='datepicker', required)
-			
-			button#find(type='button', class='btn btn-success btn-lg btn-block') Hitta besiktningstid
-	#map
+	main
+		#map
+		#overlay.hide
 	script(src='//code.jquery.com/jquery.js')
 	script(src='js/bootstrap.min.js')
-	script(src='js/bootstrap-datepicker.js')
 	script(src='http://www.google.com/jsapi')
 	script(src='http://maps.googleapis.com/maps/api/js?key=AIzaSyCeKMvcgt8Rd7ZyhbtoOPyqyFTqesPNV3o&sensor=true')
 	script(src='js/drive.js')

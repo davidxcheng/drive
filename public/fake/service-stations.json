@@ -9,4 +9,10 @@
  	"title": "Dekra Hemvärnsgatan 11",
  	"lat": 59.353904, 
  	"lng": 17.976492
+ }, 
+ {
+ 	"id": 1002,
+ 	"title": "Dekra Tegelvägen 22",
+ 	"lat": 62.397105, 
+ 	"lng": 17.256451
  }]

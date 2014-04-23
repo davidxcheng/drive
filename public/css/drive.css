@@ -22,6 +22,7 @@ main {
   font-family: 'Roboto', sans-serif;
   color: #eee;
   font-size: 1.4rem;
+  transition: left 0.2s;
 }
 #sidebar i {
   margin-right: 4px;
@@ -49,60 +50,6 @@ main {
   color: #6495ed;
   font-size: 1.6rem;
 }
-.show-sidebar {
-  -webkit-animation: 0.3s slide-in linear;
-  -webkit-animation-fill-mode: forwards;
-}
-.hide-sidebar {
-  -webkit-animation: 0.3s slide-out linear;
-}
-@-moz-keyframes slide-in {
-  100% {
-    transform: translatex(260px);
-  }
-}
-@-webkit-keyframes slide-in {
-  100% {
-    transform: translatex(260px);
-  }
-}
-@-o-keyframes slide-in {
-  100% {
-    transform: translatex(260px);
-  }
-}
-@-ms-keyframes slide-in {
-  100% {
-    transform: translatex(260px);
-  }
-}
-@keyframes slide-in {
-  100% {
-    transform: translatex(260px);
-  }
-}
-@-moz-keyframes slide-out {
-  100% {
-    transform: translatex(0);
-  }
-}
-@-webkit-keyframes slide-out {
-  100% {
-    transform: translatex(0);
-  }
-}
-@-o-keyframes slide-out {
-  100% {
-    transform: translatex(0);
-  }
-}
-@-ms-keyframes slide-out {
-  100% {
-    transform: translatex(0);
-  }
-}
-@keyframes slide-out {
-  100% {
-    transform: translatex(0);
-  }
+#sidebar.show-sidebar {
+  left: 0;
 }

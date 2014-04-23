@@ -63,11 +63,16 @@ function init() {
 		})
 	};
 
-	var	elSidebar = sidebar;
+	var	elSidebar = sidebar,
+		elCloseSidebar = document.getElementsByClassName('close-sidebar')[0];
 
 	function showStationDetails(stationId) {
 		sidebar.classList.add('show-sidebar');
 	}
+
+	elCloseSidebar.addEventListener('click', function(e) {
+		sidebar.classList.remove('show-sidebar');
+	});
 }
 
 module.exports = {

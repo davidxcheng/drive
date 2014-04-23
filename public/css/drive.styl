@@ -14,12 +14,13 @@ main
 #sidebar
 	position absolute
 	left -260px
+	transition left .2s
 	top 0
 	z-index 2
 	width 260px
 	height 100%
 	padding 6px 10px 0 18px
-	background-color rgba(0, 0, 0, .7)
+	background-color rgba(0, 0, 0, .8)
 	font-family 'Roboto', sans-serif
 	color #eee
 	font-size 1.4rem
@@ -49,17 +50,5 @@ main
 		color cornflowerblue
 		font-size 1.6rem
 
-.show-sidebar
-	-webkit-animation .3s slide-in linear
-	-webkit-animation-fill-mode forwards
-
-.hide-sidebar
-	-webkit-animation .3s slide-out linear
-
-@keyframes slide-in
-	to
-		transform translatex(260px)
-
-@keyframes slide-out
-	to
-		transform translatex(0)
+#sidebar.show-sidebar
+	left 0

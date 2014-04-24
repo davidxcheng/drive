@@ -13,16 +13,16 @@ main {
 #sidebar {
   position: absolute;
   left: -260px;
+  transition: left 0.2s;
   top: 0;
   z-index: 2;
   width: 260px;
   height: 100%;
   padding: 6px 10px 0 18px;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   font-family: 'Roboto', sans-serif;
   color: #eee;
   font-size: 1.4rem;
-  transition: left 0.2s;
 }
 #sidebar i {
   margin-right: 4px;

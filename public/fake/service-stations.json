@@ -1,18 +1,36 @@
 [{
 	"id": 1000,
-	"title": "Dekra Solnavägen 15",
-	"lat": 59.352929,
-	"lng": 18.017071
+	"title": "DEKRA",
+	"phone": [],
+	"adr": {
+		"street": "Solnavägen 15"
+	},
+	"coords": {
+		"lat": 59.352929,
+		"lng": 18.017071
+	}
  }, 
  {
  	"id": 1001,
- 	"title": "Dekra Hemvärnsgatan 11",
- 	"lat": 59.353904, 
- 	"lng": 17.976492
+ 	"title": "DEKRA",
+ 	"phone": [],
+ 	"adr": {
+ 		"street": "Hemvärnsgatan 11"
+ 	},
+ 	"coords": {
+	 	"lat": 59.353904, 
+	 	"lng": 17.976492
+ 	}
  }, 
  {
  	"id": 1002,
- 	"title": "Dekra Tegelvägen 22",
- 	"lat": 62.397105, 
- 	"lng": 17.256451
+ 	"title": "DEKRA",
+ 	"phone": [],
+ 	"adr": {
+ 		"street": "Tegelvägen 22"
+ 	},
+ 	"coords": {
+	 	"lat": 62.397105, 
+	 	"lng": 17.256451
+ 	}
  }]

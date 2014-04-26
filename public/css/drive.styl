@@ -13,8 +13,8 @@ main
 
 #sidebar
 	position absolute
-	left -260px
-	transition left .2s
+	transition transform .3s
+	transform translatex(-260px)
 	top 0
 	z-index 2
 	width 260px
@@ -51,4 +51,4 @@ main
 		font-size 1.6rem
 
 #sidebar.show-sidebar
-	left 0
+	transform translatex(0)

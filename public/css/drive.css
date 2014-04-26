@@ -12,7 +12,7 @@ main {
 }
 #sidebar {
   position: absolute;
-  transition: transform 5s;
+  transition: transform 0.3s;
   transform: translatex(-260px);
   top: 0;
   z-index: 2;
@@ -21,6 +21,7 @@ main {
   padding: 6px 10px 0 18px;
   background-color: rgba(0,0,0,0.8);
   font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
   color: #eee;
   font-size: 1.4rem;
 }
@@ -30,7 +31,7 @@ main {
 #sidebar .close-sidebar {
   float: right;
   font-size: 4rem;
-  color: #f00;
+  color: rgba(255,0,0,0.8);
   margin: 0;
   cursor: pointer;
 }

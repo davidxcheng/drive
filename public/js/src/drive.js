@@ -4,20 +4,18 @@ function init() {
 
 	$.getJSON('fake/service-stations.json', function(data) {
 		stations = data;
+		console.dir(stations);
 	});
-
-	var where = {
-		lat: 0,
-		lng: 0
-	};
 
 	if (!navigator.geolocation)
 		return;
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
-			where.lat = pos.coords.latitude;
-			where.lng = pos.coords.longitude;
+			var where = {
+				lat: pos.coords.latitude,
+				lng: pos.coords.longitude
+			};
 
 			if (stations)
 				initMap(where, stations, 'map');
@@ -72,15 +70,20 @@ function init() {
 		})
 	};
 
-	var	elSidebar = sidebar,
-		elCloseSidebar = document.getElementsByClassName('close-sidebar')[0];
+	var	elCloseSidebar = document.getElementsByClassName('close-sidebar')[0];
 
 	function showStationDetails(stationId) {
-		var station = search(stations).find(stationId);
+		var station = search(stations).find(stationId)[0];
 
-		console.dir(station);
+		stationName.innerText = station.name;
+		stationStreetAdr.innerText = station.adr.street;
+		stationPhone.innerText = station.phone[0];
+		stationHours.innerHTML = station.hours.reduce(function(concat, item) {
+			return concat + '<li>' + item + '</li>';
+		}, '');
 
-		sidebar.classList.add('show-sidebar');
+		if (!sidebar.classList.contains('show-sidebar'))
+			sidebar.classList.add('show-sidebar');
 	}
 
 	elCloseSidebar.addEventListener('click', function(e) {

@@ -1,36 +1,51 @@
 [{
 	"id": 1000,
-	"title": "DEKRA",
-	"phone": [],
+	"name": "DEKRA",
+	"phone": ["010-455 31 80"],
 	"adr": {
 		"street": "Solnavägen 15"
 	},
+	"hours": [
+		"Mån - fre: 07:00--19:00",
+		"Lör: stängt",
+		"Sön: stängt"
+	],
 	"coords": {
 		"lat": 59.352929,
 		"lng": 18.017071
 	}
- }, 
+ },
  {
- 	"id": 1001,
- 	"title": "DEKRA",
- 	"phone": [],
- 	"adr": {
- 		"street": "Hemvärnsgatan 11"
- 	},
- 	"coords": {
+	"id": 1001,
+	"name": "DEKRA",
+	"phone": ["077-144 14 41"],
+	"adr": {
+		"street": "Hemvärnsgatan 11"
+	},
+	"hours": [
+		"Mån - fre: 08:00--17:00",
+		"Lör: stängt",
+		"Sön: stängt"
+	],
+	"coords": {
 	 	"lat": 59.353904, 
 	 	"lng": 17.976492
  	}
- }, 
+ },
  {
- 	"id": 1002,
- 	"title": "DEKRA",
- 	"phone": [],
- 	"adr": {
- 		"street": "Tegelvägen 22"
- 	},
- 	"coords": {
-	 	"lat": 62.397105, 
-	 	"lng": 17.256451
- 	}
+	"id": 1002,
+	"name": "DEKRA",
+	"phone": ["077-144 14 41"],
+	"adr": {
+		"street": "Tegelvägen 22"
+	},
+	"hours": [
+		"Mån - fre: 08:00--17:00",
+		"Lör: stängt",
+		"Sön: stängt"
+	],
+	"coords": {
+		"lat": 62.397105, 
+		"lng": 17.256451
+	}
  }]

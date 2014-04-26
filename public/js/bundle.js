@@ -5,20 +5,18 @@ function init() {
 
 	$.getJSON('fake/service-stations.json', function(data) {
 		stations = data;
+		console.dir(stations);
 	});
-
-	var where = {
-		lat: 0,
-		lng: 0
-	};
 
 	if (!navigator.geolocation)
 		return;
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
-			where.lat = pos.coords.latitude;
-			where.lng = pos.coords.longitude;
+			var where = {
+				lat: pos.coords.latitude,
+				lng: pos.coords.longitude
+			};
 
 			if (stations)
 				initMap(where, stations, 'map');
@@ -73,15 +71,23 @@ function init() {
 		})
 	};
 
-	var	elSidebar = sidebar,
-		elCloseSidebar = document.getElementsByClassName('close-sidebar')[0];
+	var	elCloseSidebar = document.getElementsByClassName('close-sidebar')[0];
 
 	function showStationDetails(stationId) {
-		var station = search(stations).find(stationId);
+		var station = search(stations).find(stationId)[0];
 
-		console.dir(station);
+		stationName.innerText = station.name;
+		stationStreetAdr.innerText = station.adr.street;
+		stationPhone.innerText = station.phone[0];
 
-		sidebar.classList.add('show-sidebar');
+		var listItems = station.hours.reduce(function(concat, item) {
+			return concat + '<li>' + item + '</li>';
+		}, '');
+
+		stationHours.innerHTML = listItems;
+
+		if (!sidebar.classList.contains('show-sidebar'))
+			sidebar.classList.add('show-sidebar');
 	}
 
 	elCloseSidebar.addEventListener('click', function(e) {
@@ -93,13 +99,13 @@ module.exports = {
 	init: init
 };
 },{"./search":3}],2:[function(require,module,exports){
-var drive = require('./drive.js');
+var drive = require('./drive');
 
 $(document).ready(function() {
 	drive.init();
 });
 
-},{"./drive.js":1}],3:[function(require,module,exports){
+},{"./drive":1}],3:[function(require,module,exports){
 module.exports = function(collection) {
 
 	var find = function(searchPhrase) {

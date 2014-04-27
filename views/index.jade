@@ -28,8 +28,9 @@ body
 				li Lör 10:00--14:00
 				li Sön Stängt
 		#map
+		input#mapSearch.hide(type='text', placeholder='Vart är du?')
 	script(src='/js/libs/jquery.js')
 	script(src='js/bootstrap.min.js')
 	script(src='http://www.google.com/jsapi')
-	script(src='http://maps.googleapis.com/maps/api/js?key=AIzaSyCeKMvcgt8Rd7ZyhbtoOPyqyFTqesPNV3o&sensor=true')
+	script(src='http://maps.googleapis.com/maps/api/js?key=AIzaSyCeKMvcgt8Rd7ZyhbtoOPyqyFTqesPNV3o&sensor=true&libraries=places')
 	script(src='js/bundle.js')

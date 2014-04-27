@@ -2,6 +2,8 @@
 main {
   position: relative;
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 #map {
   width: 100%;
@@ -20,8 +22,6 @@ main {
   height: 100%;
   padding: 6px 10px 0 18px;
   background-color: rgba(0,0,0,0.8);
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
   color: #eee;
   font-size: 1.6rem;
 }
@@ -53,4 +53,16 @@ main {
 }
 #sidebar.show-sidebar {
   transform: translatex(0);
+}
+#mapSearch {
+  border: 1px solid transparent;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-size: 1.5rem;
+  text-overflow: ellipsis;
+  width: 400px;
+  height: 32px;
+  padding: 0 11px 0 13px;
+  margin-top: 16px;
 }

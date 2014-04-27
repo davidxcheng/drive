@@ -1,10 +1,10 @@
 function init() {
 	var search = require('./search'),
+		show = require('./show'),
 		stations = null;
 
 	$.getJSON('fake/service-stations.json', function(data) {
 		stations = data;
-		console.dir(stations);
 	});
 
 	if (!navigator.geolocation)
@@ -12,13 +12,13 @@ function init() {
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
-			var where = {
+			var center = {
 				lat: pos.coords.latitude,
 				lng: pos.coords.longitude
 			};
 
 			if (stations)
-				initMap(where, stations, 'map');
+				initMap(center, stations, 'map');
 			else
 				console.log('no stations loaded');
 		},
@@ -40,19 +40,40 @@ function init() {
 			maximumAge: 1000
 		});
 
-	function initMap(youAreHere, stations, selector) {
+	function initMap(center, stations, selector) {
 		var options = {
-			center: new google.maps.LatLng(youAreHere.lat, youAreHere.lng),
+			center: new google.maps.LatLng(center.lat, center.lng),
 			zoom: 14,
-			mapTypeId: google.maps.MapTypeId.MAP // MAP | SATTELITE
+			mapTypeId: google.maps.MapTypeId.ROADMAP // MAP | SATTELITE | ROADMAP
 		};
 		
 		var map = new google.maps.Map(document.getElementById(selector), options);
-		new google.maps.Marker({
-			position: new google.maps.LatLng(youAreHere.lat, youAreHere.lng),
+
+		// Add search box
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(mapSearch);
+		var searchBox = new google.maps.places.SearchBox(mapSearch);
+		google.maps.event.addListener(searchBox, 'places_changed', function() {
+			var places = searchBox.getPlaces();
+			if (places) {
+				var coords = new google.maps.LatLng(
+					places[0].geometry.location.k, 
+					places[0].geometry.location.A);
+				map.panTo(coords);
+			}
+		});
+
+		// Add marker that shows where user is
+		var youAreHere = new google.maps.Marker({
+			position: new google.maps.LatLng(center.lat, center.lng),
 			map: map
 		});
 
+		google.maps.event.addListener(youAreHere, 'click', function(e) {
+			mapSearch.classList.remove('hide');
+			mapSearch.focus();
+		});
+
+		// Add markers for stations
 		var markerIcon = 'img/trade-marker.png';
 
 		stations.forEach(function(station) {
@@ -70,25 +91,10 @@ function init() {
 		})
 	};
 
-	var	elCloseSidebar = document.getElementsByClassName('close-sidebar')[0];
-
 	function showStationDetails(stationId) {
 		var station = search(stations).find(stationId)[0];
-
-		stationName.innerText = station.name;
-		stationStreetAdr.innerText = station.adr.street;
-		stationPhone.innerText = station.phone[0];
-		stationHours.innerHTML = station.hours.reduce(function(concat, item) {
-			return concat + '<li>' + item + '</li>';
-		}, '');
-
-		if (!sidebar.classList.contains('show-sidebar'))
-			sidebar.classList.add('show-sidebar');
+		show.details(station);
 	}
-
-	elCloseSidebar.addEventListener('click', function(e) {
-		sidebar.classList.remove('show-sidebar');
-	});
 }
 
 module.exports = {

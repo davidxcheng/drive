@@ -1,6 +1,7 @@
 function init() {
 	var search = require('./search'),
 		show = require('./show'),
+		centerMarker = null,
 		stations = null;
 
 	$.getJSON('fake/service-stations.json', function(data) {
@@ -13,7 +14,7 @@ function init() {
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
 			var center = {
-				lat: pos.coords.latitude,
+				lat: pos.coords.latitude, 
 				lng: pos.coords.longitude
 			};
 
@@ -55,20 +56,23 @@ function init() {
 		google.maps.event.addListener(searchBox, 'places_changed', function() {
 			var places = searchBox.getPlaces();
 			if (places) {
-				var coords = new google.maps.LatLng(
-					places[0].geometry.location.k, 
-					places[0].geometry.location.A);
+				var coords = places[0].geometry.location;
+
+				centerMarker.setMap(null);
+				centerMarker.position = coords;
+				centerMarker.setMap(map);
+
 				map.panTo(coords);
 			}
 		});
 
 		// Add marker that shows where user is
-		var youAreHere = new google.maps.Marker({
+		centerMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(center.lat, center.lng),
 			map: map
 		});
 
-		google.maps.event.addListener(youAreHere, 'click', function(e) {
+		google.maps.event.addListener(centerMarker, 'click', function(e) {
 			mapSearch.classList.remove('hide');
 			mapSearch.focus();
 		});

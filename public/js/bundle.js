@@ -51,7 +51,7 @@ function init() {
 		var map = new google.maps.Map(document.getElementById(selector), options);
 
 		// Add search box
-		map.controls[google.maps.ControlPosition.TOP_CENTER].push(mapSearch);
+		map.controls[google.maps.ControlPosition.TOP_LEFT].push(mapSearch);
 		var searchBox = new google.maps.places.SearchBox(mapSearch);
 		// Bias the search box results to places in Sweden.
 		searchBox.setBounds(new google.maps.LatLngBounds(

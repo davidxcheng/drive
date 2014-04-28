@@ -47,12 +47,16 @@ function init() {
 			zoom: 14,
 			mapTypeId: google.maps.MapTypeId.ROADMAP // MAP | SATTELITE | ROADMAP
 		};
-		
 		var map = new google.maps.Map(document.getElementById(selector), options);
 
 		// Add search box
 		map.controls[google.maps.ControlPosition.TOP_CENTER].push(mapSearch);
 		var searchBox = new google.maps.places.SearchBox(mapSearch);
+		// Bias the search box results to places in Sweden.
+		searchBox.setBounds(new google.maps.LatLngBounds(
+			new google.maps.LatLng(55.491660, 13.464124),
+			new google.maps.LatLng(59.900274, 17.990491)));
+
 		google.maps.event.addListener(searchBox, 'places_changed', function() {
 			var places = searchBox.getPlaces();
 			if (places) {

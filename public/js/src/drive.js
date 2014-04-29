@@ -13,6 +13,8 @@ function init() {
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
+			mapSearch.placeholder = 'Byta utgångspunkt?';
+
 			var center = {
 				lat: pos.coords.latitude, 
 				lng: pos.coords.longitude
@@ -23,7 +25,7 @@ function init() {
 			else
 				console.log('no stations loaded');
 		},
-		function errorCallback(error) { 
+		function errorCallback(error) {
 			switch(error.code) {
 				case error.TIMEOUT:
 					console.log('Timeout. Msg: ' + error.message);
@@ -74,11 +76,6 @@ function init() {
 		centerMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(center.lat, center.lng),
 			map: map
-		});
-
-		google.maps.event.addListener(centerMarker, 'click', function(e) {
-			mapSearch.classList.remove('hide');
-			mapSearch.focus();
 		});
 
 		// Add markers for stations

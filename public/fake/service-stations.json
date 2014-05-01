@@ -1,7 +1,6 @@
 [{
 	"id": 1000,
 	"name": "DEKRA",
-	"phone": ["010-455 31 80"],
 	"adr": {
 		"street": "Solnavägen 15"
 	},
@@ -10,6 +9,10 @@
 		"Lör: stängt",
 		"Sön: stängt"
 	],
+	"booking": {
+		"phone": "010-455 31 80",
+		"url": "http://bokning.dekra-bilbesiktning.se/bb-web/webBooking"
+	},
 	"coords": {
 		"lat": 59.352929,
 		"lng": 18.017071
@@ -18,7 +21,6 @@
  {
 	"id": 1001,
 	"name": "DEKRA",
-	"phone": ["077-144 14 41"],
 	"adr": {
 		"street": "Hemvärnsgatan 11"
 	},
@@ -27,6 +29,10 @@
 		"Lör: stängt",
 		"Sön: stängt"
 	],
+	"booking": {
+		"phone": "077-144 14 41",
+		"url": "http://bokning.dekra-bilbesiktning.se/bb-web/webBooking"
+	},
 	"coords": {
 	 	"lat": 59.353904, 
 	 	"lng": 17.976492
@@ -35,7 +41,6 @@
  {
 	"id": 1002,
 	"name": "DEKRA",
-	"phone": ["077-144 14 41"],
 	"adr": {
 		"street": "Tegelvägen 22"
 	},
@@ -44,6 +49,10 @@
 		"Lör: stängt",
 		"Sön: stängt"
 	],
+	"booking": {
+		"phone": "077-144 14 41",
+		"url": "http://bokning.dekra-bilbesiktning.se/bb-web/webBooking"
+	},
 	"coords": {
 		"lat": 62.397105, 
 		"lng": 17.256451

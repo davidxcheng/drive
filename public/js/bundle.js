@@ -150,7 +150,7 @@ module.exports = (function() {
 		details: function(station) {
 			stationName.innerText = station.name;
 			stationStreetAdr.innerText = station.adr.street;
-			stationPhone.innerText = station.phone[0];
+			stationPhone.innerText = station.booking.phone;
 			stationHours.innerHTML = station.hours.reduce(function(concat, item) {
 				return concat + '<li>' + item + '</li>';
 			}, '');

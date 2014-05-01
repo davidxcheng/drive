@@ -33,11 +33,30 @@ main {
   margin-right: 4px;
 }
 #sidebar .close-sidebar {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  width: 36px;
+  height: 36px;
+  opacity: 1;
+  cursor: pointer;
+}
+#sidebar .close-sidebar circle {
+  fill: none;
+  stroke-width: 2;
+  stroke: #f00000;
+}
+#sidebar .close-sidebar text {
+  text-anchor: middle;
+  fill: #eee;
+  font-size: 2.4rem;
+  font-family: FontAwesome;
+}
+#sidebar .close-sidebar {
   float: right;
   font-size: 4rem;
   color: rgba(255,0,0,0.8);
   margin: 0;
-  cursor: pointer;
 }
 #sidebar .close-sidebar:hover {
   color: #f00;
@@ -100,8 +119,4 @@ main {
   height: 32px;
   padding: 0 11px 0 13px;
   margin-top: 16px;
-}
-#mapSearch:before {
-  font-family: FontAwesome;
-  content: '\f041';
 }

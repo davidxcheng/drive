@@ -5,14 +5,22 @@ module.exports = (function() {
 		sidebar.classList.remove('show-sidebar');
 	});
 
+	btnCall.addEventListener('click', function() {
+		lblPhone.classList.remove('hide');
+	});
+
 	return {
 		details: function(station) {
+			lblPhone.classList.add('hide');
+
 			stationName.innerText = station.name;
 			stationStreetAdr.innerText = station.adr.street;
-			stationPhone.innerText = station.booking.phone;
 			stationHours.innerHTML = station.hours.reduce(function(concat, item) {
 				return concat + '<li>' + item + '</li>';
 			}, '');
+			btnBook.href = station.booking.url;
+			btnCall.href = 'tel:' + station.booking.phone.replace(/[^0-9]/g, '');
+			lblPhone.innerText = station.booking.phone;
 
 			if (!sidebar.classList.contains('show-sidebar'))
 				sidebar.classList.add('show-sidebar');

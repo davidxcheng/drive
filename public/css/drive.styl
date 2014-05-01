@@ -1,5 +1,10 @@
 @import url('reset.css')
 
+$accent-text = cornflowerblue 
+$bright-text = #eee
+$subtle-dark = #444
+$oxygen	= 12px
+
 html, body
 	height 100%
 
@@ -26,7 +31,7 @@ main
 	height 100%
 	padding 6px 10px 0 18px
 	background-color rgba(0, 0, 0, .85)
-	color #eee
+	color $bright-text
 	font-size 1.6rem
 
 	i
@@ -47,35 +52,43 @@ main
 	h1
 		font-weight normal
 		font-size 2rem
-		color cornflowerblue
+		color $accent-text
 
 	h2
 		margin-top 12px
-		color cornflowerblue
+		color $accent-text
 		font-size 1.6rem
 
 	#contact
 		margin-top 12px
-		border-top 1px solid #444
+		border-top 1px solid $subtle-dark
 
 		.cta
-			float left
+			display inline-block
+			text-align center
 			width 50%
-			margin-top 4px
-			padding-top 8 px
-			border-left 1px solid #444
+			margin 4px 0 12px
+			padding-top 10 px
+			border-left 1px solid $subtle-dark
 			cursor pointer
-			color cornflowerblue
+			color $accent-text
 
 			i
 				font-size 2.8rem
-				color cornflowerblue
+				color $accent-text
+
+			i.fa-calendar
+				margin -3px 0 3px 0
 
 		.cta:first-child
 			border-left none
 
 		.cta:hover
 			text-decoration none
+
+		#lblPhone
+			text-align center
+			font-size 2.4rem
 
 #sidebar.show-sidebar
 	transform translatex(0)

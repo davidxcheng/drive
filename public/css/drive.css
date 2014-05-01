@@ -60,10 +60,11 @@ main {
   border-top: 1px solid #444;
 }
 #sidebar #contact .cta {
-  float: left;
+  display: inline-block;
+  text-align: center;
   width: 50%;
-  margin-top: 4px;
-  padding-top: 8px;
+  margin: 4px 0 12px;
+  padding-top: 10px;
   border-left: 1px solid #444;
   cursor: pointer;
   color: #6495ed;
@@ -72,11 +73,18 @@ main {
   font-size: 2.8rem;
   color: #6495ed;
 }
+#sidebar #contact .cta i.fa-calendar {
+  margin: -3px 0 3px 0;
+}
 #sidebar #contact .cta:first-child {
   border-left: none;
 }
 #sidebar #contact .cta:hover {
   text-decoration: none;
+}
+#sidebar #contact #lblPhone {
+  text-align: center;
+  font-size: 2.4rem;
 }
 #sidebar.show-sidebar {
   transform: translatex(0);
@@ -92,4 +100,8 @@ main {
   height: 32px;
   padding: 0 11px 0 13px;
   margin-top: 16px;
+}
+#mapSearch:before {
+  font-family: FontAwesome;
+  content: '\f041';
 }

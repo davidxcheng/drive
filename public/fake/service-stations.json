@@ -674,7 +674,7 @@
 	"id": "statid0165",
 	"name": "Besikta Bilprovning i Sverige AB",
 	"adr": {
-	 	"street": "MÂtt Johanssons väg 14"
+	 	"street": "Mått Johanssons väg 14"
 	},
 	"booking": {
 		"phone": "0774-400 800", 
@@ -770,7 +770,7 @@
 	"id": "statid0171",
 	"name": "Besikta Bilprovning i Sverige AB",
 	"adr": {
-	 	"street": "KarlsbogÂrdsgatan 2"
+	 	"street": "Karlsbogårdsgatan 2"
 	},
 	"booking": {
 		"phone": "0774-400 800", 
@@ -1138,7 +1138,7 @@
 	"id": "statid0194",
 	"name": "Besikta Bilprovning i Sverige AB",
 	"adr": {
-	 	"street": "÷stra Ringvägen 294-3"
+	 	"street": "Östra Ringvägen 294-3"
 	},
 	"booking": {
 		"phone": "0774-400 800", 
@@ -1154,7 +1154,7 @@
 	"id": "statid0195",
 	"name": "Besikta Bilprovning i Sverige AB",
 	"adr": {
-	 	"street": "JärntrÂdsvägen 1-3"
+	 	"street": "Järntrådsvägen 1-3"
 	},
 	"booking": {
 		"phone": "0774-400 800", 

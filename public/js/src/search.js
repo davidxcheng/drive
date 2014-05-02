@@ -44,9 +44,6 @@ module.exports = function(collection) {
 			return item.distance < maxDistanceInMeters;
 		});
 
-		console.log('searchin');
-		console.dir(result);
-
 		return result;
 	}
 

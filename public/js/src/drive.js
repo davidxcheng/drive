@@ -115,8 +115,6 @@ function init() {
 			bounds.extend(nearbyStation.position);
 		});
 
-		console.log('fit bounds');
-		console.dir(bounds);
 		map.fitBounds(bounds);
 	}
 

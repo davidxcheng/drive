@@ -13,7 +13,7 @@ function init() {
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
-			mapSearch.placeholder = 'Vill du byta ort?';
+			mapSearch.placeholder = '&#xf041; Vill du byta ort?';
 
 			var center = {
 				lat: pos.coords.latitude, 
@@ -105,7 +105,7 @@ function init() {
 	}
 
 	function showNearestStations(map) {
-		var nearestStations = search(stations).findNearest(currentPositionMarker.position, 3),
+		var nearestStations = search(stations).findNearest(currentPositionMarker.position),
 			bounds = new google.maps.LatLngBounds();
 
 		// Set map boundries

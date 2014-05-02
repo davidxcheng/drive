@@ -13,12 +13,17 @@ module.exports = function(collection) {
 		return result;
 	};
 
-	var findNearest = function(currentPosition, maxResultSize) {
+	var findNearest = function(currentPosition, options) {
 		var result = [],
-			maxDistanceInMeters = 2.5 * 10 * 1000;
+			defaultRadius = 2.5 * 10 * 1000;
+
+		options = options || {};
+		maxResultSize = options.maxResultSize || 3;
+		maxDistanceInMeters = options.maxDistanceInMeters || defaultRadius;
 
 		// Compute distance to each item
 		collection.forEach(function(item) {
+			// todo: roll your own and remove google dependency
 			item.distance = google.maps.geometry.spherical.computeDistanceBetween(
 				currentPosition, 
 				new google.maps.LatLng(item.coords.lat, item.coords.lng))

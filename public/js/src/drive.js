@@ -13,7 +13,7 @@ function init() {
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
-			mapSearch.placeholder = 'Inte där du vill vara?';
+			mapSearch.placeholder = 'Vill du byta ort?';
 
 			var center = {
 				lat: pos.coords.latitude, 

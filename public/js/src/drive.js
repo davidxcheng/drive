@@ -98,9 +98,8 @@ function init() {
 				currentPositionMarker.position = coords;
 				currentPositionMarker.setMap(map);
 
-				showNearestStations(map);
-
 				map.panTo(coords);
+				showNearestStations(map);
 			}
 		});
 	}

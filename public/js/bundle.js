@@ -99,9 +99,8 @@ function init() {
 				currentPositionMarker.position = coords;
 				currentPositionMarker.setMap(map);
 
-				showNearestStations(map);
-
 				map.panTo(coords);
+				showNearestStations(map);
 			}
 		});
 	}
@@ -116,8 +115,6 @@ function init() {
 			bounds.extend(nearbyStation.position);
 		});
 
-		console.log('fit bounds');
-		console.dir(bounds);
 		map.fitBounds(bounds);
 	}
 
@@ -183,9 +180,6 @@ module.exports = function(collection) {
 
 			return item.distance < maxDistanceInMeters;
 		});
-
-		console.log('searchin');
-		console.dir(result);
 
 		return result;
 	}

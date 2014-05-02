@@ -1,7 +1,7 @@
 function init() {
 	var search = require('./search'),
 		show = require('./show'),
-		centerMarker = null,
+		currentPositionMarker = null,
 		stations = null;
 
 	$.getJSON('fake/service-stations.json', function(data) {
@@ -13,7 +13,7 @@ function init() {
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
-			mapSearch.placeholder = 'Byta utgångspunkt?';
+			mapSearch.placeholder = 'Inte där du vill vara?';
 
 			var center = {
 				lat: pos.coords.latitude, 
@@ -45,38 +45,17 @@ function init() {
 
 	function initMap(center, stations, selector) {
 		var options = {
-			center: new google.maps.LatLng(center.lat, center.lng),
-			zoom: 14,
 			mapTypeId: google.maps.MapTypeId.ROADMAP // MAP | SATTELITE | ROADMAP
 		};
 		var map = new google.maps.Map(document.getElementById(selector), options);
 
-		// Add search box
-		map.controls[google.maps.ControlPosition.TOP_LEFT].push(mapSearch);
-		var searchBox = new google.maps.places.SearchBox(mapSearch);
-		// Bias the search box results to places in Sweden.
-		searchBox.setBounds(new google.maps.LatLngBounds(
-			new google.maps.LatLng(55.491660, 13.464124),
-			new google.maps.LatLng(59.900274, 17.990491)));
-
-		google.maps.event.addListener(searchBox, 'places_changed', function() {
-			var places = searchBox.getPlaces();
-			if (places) {
-				var coords = places[0].geometry.location;
-
-				centerMarker.setMap(null);
-				centerMarker.position = coords;
-				centerMarker.setMap(map);
-
-				map.panTo(coords);
-			}
-		});
-
 		// Add marker that shows where user is
-		centerMarker = new google.maps.Marker({
+		currentPositionMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(center.lat, center.lng),
 			map: map
 		});
+
+		initSearchBox(map);
 
 		// Add markers for stations
 		var markerIcon = 'img/trade-marker.png';
@@ -90,14 +69,59 @@ function init() {
 				map: map
 			});
 
+			station.position = marker.position;
+
 			google.maps.event.addListener(marker, 'click', function(e) {
 				showStationDetails(station.id);
 			});
-		})
-	};
+		});
+
+		showNearestStations(map);
+	}
+
+	function initSearchBox(map) {
+		// Add search box
+		map.controls[google.maps.ControlPosition.TOP_LEFT].push(mapSearch);
+		var searchBox = new google.maps.places.SearchBox(mapSearch);
+
+		// Bias the search box results to places in Sweden.
+		var malmo = new google.maps.LatLng(55.491660, 13.464124),
+			uppsala = new google.maps.LatLng(59.900274, 17.990491);
+		searchBox.setBounds(new google.maps.LatLngBounds(malmo,	uppsala));
+
+		google.maps.event.addListener(searchBox, 'places_changed', function() {
+			var places = searchBox.getPlaces();
+			if (places) {
+				var coords = places[0].geometry.location;
+
+				currentPositionMarker.setMap(null);
+				currentPositionMarker.position = coords;
+				currentPositionMarker.setMap(map);
+
+				showNearestStations(map);
+
+				map.panTo(coords);
+			}
+		});
+	}
+
+	function showNearestStations(map) {
+		var nearestStations = search(stations).findNearest(currentPositionMarker.position, 3),
+			bounds = new google.maps.LatLngBounds();
+
+		// Set map boundries
+		bounds.extend(currentPositionMarker.position);
+		nearestStations.forEach(function(nearbyStation) {
+			bounds.extend(nearbyStation.position);
+		});
+
+		console.log('fit bounds');
+		console.dir(bounds);
+		map.fitBounds(bounds);
+	}
 
 	function showStationDetails(stationId) {
-		var station = search(stations).find(stationId)[0];
+		var station = search(stations).findById(stationId);
 		show.details(station);
 	}
 }

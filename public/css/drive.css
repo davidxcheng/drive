@@ -101,7 +101,3 @@ main {
   padding: 0 11px 0 13px;
   margin-top: 16px;
 }
-#mapSearch:before {
-  font-family: FontAwesome;
-  content: '\f041';
-}

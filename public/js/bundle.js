@@ -2,7 +2,7 @@
 function init() {
 	var search = require('./search'),
 		show = require('./show'),
-		centerMarker = null,
+		currentPositionMarker = null,
 		stations = null;
 
 	$.getJSON('fake/service-stations.json', function(data) {
@@ -14,7 +14,7 @@ function init() {
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
-			mapSearch.placeholder = 'Byta utgångspunkt?';
+			mapSearch.placeholder = 'Inte där du vill vara?';
 
 			var center = {
 				lat: pos.coords.latitude, 
@@ -46,38 +46,17 @@ function init() {
 
 	function initMap(center, stations, selector) {
 		var options = {
-			center: new google.maps.LatLng(center.lat, center.lng),
-			zoom: 14,
 			mapTypeId: google.maps.MapTypeId.ROADMAP // MAP | SATTELITE | ROADMAP
 		};
 		var map = new google.maps.Map(document.getElementById(selector), options);
 
-		// Add search box
-		map.controls[google.maps.ControlPosition.TOP_LEFT].push(mapSearch);
-		var searchBox = new google.maps.places.SearchBox(mapSearch);
-		// Bias the search box results to places in Sweden.
-		searchBox.setBounds(new google.maps.LatLngBounds(
-			new google.maps.LatLng(55.491660, 13.464124),
-			new google.maps.LatLng(59.900274, 17.990491)));
-
-		google.maps.event.addListener(searchBox, 'places_changed', function() {
-			var places = searchBox.getPlaces();
-			if (places) {
-				var coords = places[0].geometry.location;
-
-				centerMarker.setMap(null);
-				centerMarker.position = coords;
-				centerMarker.setMap(map);
-
-				map.panTo(coords);
-			}
-		});
-
 		// Add marker that shows where user is
-		centerMarker = new google.maps.Marker({
+		currentPositionMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(center.lat, center.lng),
 			map: map
 		});
+
+		initSearchBox(map);
 
 		// Add markers for stations
 		var markerIcon = 'img/trade-marker.png';
@@ -91,14 +70,59 @@ function init() {
 				map: map
 			});
 
+			station.position = marker.position;
+
 			google.maps.event.addListener(marker, 'click', function(e) {
 				showStationDetails(station.id);
 			});
-		})
-	};
+		});
+
+		showNearestStations(map);
+	}
+
+	function initSearchBox(map) {
+		// Add search box
+		map.controls[google.maps.ControlPosition.TOP_LEFT].push(mapSearch);
+		var searchBox = new google.maps.places.SearchBox(mapSearch);
+
+		// Bias the search box results to places in Sweden.
+		var malmo = new google.maps.LatLng(55.491660, 13.464124),
+			uppsala = new google.maps.LatLng(59.900274, 17.990491);
+		searchBox.setBounds(new google.maps.LatLngBounds(malmo,	uppsala));
+
+		google.maps.event.addListener(searchBox, 'places_changed', function() {
+			var places = searchBox.getPlaces();
+			if (places) {
+				var coords = places[0].geometry.location;
+
+				currentPositionMarker.setMap(null);
+				currentPositionMarker.position = coords;
+				currentPositionMarker.setMap(map);
+
+				showNearestStations(map);
+
+				map.panTo(coords);
+			}
+		});
+	}
+
+	function showNearestStations(map) {
+		var nearestStations = search(stations).findNearest(currentPositionMarker.position, 3),
+			bounds = new google.maps.LatLngBounds();
+
+		// Set map boundries
+		bounds.extend(currentPositionMarker.position);
+		nearestStations.forEach(function(nearbyStation) {
+			bounds.extend(nearbyStation.position);
+		});
+
+		console.log('fit bounds');
+		console.dir(bounds);
+		map.fitBounds(bounds);
+	}
 
 	function showStationDetails(stationId) {
-		var station = search(stations).find(stationId)[0];
+		var station = search(stations).findById(stationId);
 		show.details(station);
 	}
 }
@@ -116,26 +140,59 @@ $(document).ready(function() {
 },{"./drive":1}],3:[function(require,module,exports){
 module.exports = function(collection) {
 
-	var find = function(searchPhrase) {
-		var result = [];
+	var findById = function(id) {
+		var result = null;
 
-		if (isNaN(searchPhrase) == false) {
-			// search by ID
-			var id = searchPhrase;
-
-			this.some(function(item) {
-				if (item.id == id)
-					result.push(item);
-				
-				return item.id == id;
-			});
-		}
+		collection.some(function(item) {
+			if (item.id == id)
+				result = item;
+			
+			return item.id == id;
+		});
 
 		return result;
 	};
 
+	var findNearest = function(currentPosition, maxResultSize) {
+		var result = [],
+			maxDistanceInMeters = 2.5 * 10 * 1000;
+
+		// Compute distance to each item
+		collection.forEach(function(item) {
+			item.distance = google.maps.geometry.spherical.computeDistanceBetween(
+				currentPosition, 
+				new google.maps.LatLng(item.coords.lat, item.coords.lng))
+		});
+
+		// Sort by distance
+		result = collection.sort(function(a, b) {
+			if (a.distance < b.distance)
+				return -1;
+			if (a.distance > b.distance)
+				return 1;
+			return 0;
+		});
+
+		if (result.length > maxResultSize)
+			result = result.slice(0, maxResultSize);
+
+		result = result.filter(function(item, index) {
+			// Don't risk to empty the whole result
+			if (index == 0) 
+				return true;
+
+			return item.distance < maxDistanceInMeters;
+		});
+
+		console.log('searchin');
+		console.dir(result);
+
+		return result;
+	}
+
 	return {
-		find: find.bind(collection)
+		findById: findById,
+		findNearest: findNearest
 	};
 };
 },{}],4:[function(require,module,exports){

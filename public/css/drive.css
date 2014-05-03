@@ -3,6 +3,9 @@ html,
 body {
   height: 100%;
 }
+nav {
+  background-color: #ccdfb3;
+}
 main {
   position: relative;
   height: 100%;

@@ -12,32 +12,31 @@ head
 	link(rel='stylesheet', href='/css/drive.css')
 body
 	nav
-		ul
-			li
-				i.fa.fa-bars
-	main
-		aside#sidebar
-			i.close-sidebar.fa.fa-times-circle
-			header
-				h1#stationName
-				i.fa.fa-map-marker
-				span#stationStreetAdr 
+		a
+			i.fa.fa-bars
+	aside#sidebar
+		i.close-sidebar.fa.fa-times-circle
+		header
+			h1#stationName
+			i.fa.fa-map-marker
+			span#stationStreetAdr 
 
-			h2
-				i.fa.fa-clock-o
-				Öppettider
-			ul#stationHours
-				li Mån - fre 08:00--17:00
-				li Lör 10:00--14:00
-				li Sön Stängt
-			#contact
-				a#btnBook.cta
-					i.fa.fa-calendar-o
-					div Boka tid
-				a#btnCall.cta
-					i.fa.fa-phone
-					div Ring
-				#lblPhone
+		h2
+			i.fa.fa-clock-o
+			Öppettider
+		ul#stationHours
+			li Mån - fre 08:00--17:00
+			li Lör 10:00--14:00
+			li Sön Stängt
+		#contact
+			a#btnBook.cta
+				i.fa.fa-calendar-o
+				div Boka tid
+			a#btnCall.cta
+				i.fa.fa-phone
+				div Ring
+			#lblPhone
+	main
 		#map
 		input#mapSearch(type='text', placeholder='Var är du?')
 	script(src='/js/libs/jquery.js')

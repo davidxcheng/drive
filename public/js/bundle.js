@@ -14,7 +14,7 @@ function init() {
 
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
-			mapSearch.placeholder = '&#xf041; Vill du byta ort?';
+			mapSearch.placeholder = 'Vill du byta ort?';
 
 			var center = {
 				lat: pos.coords.latitude, 

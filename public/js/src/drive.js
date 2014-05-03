@@ -1,11 +1,12 @@
 function init() {
-	var search = require('./search'),
+	var request = require('superagent'),
+		search = require('./search'),
 		show = require('./show'),
 		currentPositionMarker = null,
 		stations = null;
 
-	$.getJSON('fake/service-stations.json', function(data) {
-		stations = data;
+	request.get('fake/service-stations.json', function(res) {
+		stations = res.body;
 	});
 
 	if (!navigator.geolocation)
@@ -19,7 +20,7 @@ function init() {
 				lat: pos.coords.latitude, 
 				lng: pos.coords.longitude
 			};
-
+console.dir(stations);
 			if (stations)
 				initMap(center, stations, 'map');
 			else

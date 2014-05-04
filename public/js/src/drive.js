@@ -12,6 +12,8 @@ function init() {
 	if (!navigator.geolocation)
 		return;
 
+	$('#map').removeClass('hide');
+
 	navigator.geolocation.getCurrentPosition(
 		function successCallback(pos) {
 			mapSearch.placeholder = 'Vill du byta ort?';
@@ -20,7 +22,7 @@ function init() {
 				lat: pos.coords.latitude, 
 				lng: pos.coords.longitude
 			};
-console.dir(stations);
+
 			if (stations)
 				initMap(center, stations, 'map');
 			else
@@ -82,6 +84,7 @@ console.dir(stations);
 
 	function initSearchBox(map) {
 		// Add search box
+		mapSearch.classList.remove('hide');
 		map.controls[google.maps.ControlPosition.TOP_LEFT].push(mapSearch);
 		var searchBox = new google.maps.places.SearchBox(mapSearch);
 

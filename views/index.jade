@@ -37,7 +37,7 @@ body
 				div Ring
 			#lblPhone
 	main
-		article#start-page
+		article#start-page.hide
 			img#preview(src='img/ios-karta.png', alt='preview')
 			section
 				header
@@ -47,6 +47,7 @@ body
 						b Nu
 					p Det självklara valet när du behöver fordonsbesiktning
 				p Hitta en besiktningsutförare nära dig på ett enkelt och smidigt sätt!
+				button#btnGoToMap.btn.btn-success.btn-lg.btn-block GO
 
 		#map.hide
 		input#mapSearch.hide(type='text', placeholder='Var är du?')

@@ -37,8 +37,18 @@ body
 				div Ring
 			#lblPhone
 	main
-		#map
-		input#mapSearch(type='text', placeholder='Var är du?')
+		article#start-page
+			img(src='img/ios-karta.png', alt='exempel')
+			section
+				header
+					h1 
+						img(src='img/trade-marker.png', alt='logo')
+						|BesiktaNu
+					p Det självklara valet när du behöver fordonsbesiktning
+				p Hitta en besiktningsutförare nära dig på ett enkelt och smidigt sätt!
+
+		#map.hide
+		input#mapSearch.hide(type='text', placeholder='Var är du?')
 	script(src='/js/libs/jquery.js')
 	script(src='js/bootstrap.min.js')
 	script(src='http://www.google.com/jsapi')

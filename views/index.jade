@@ -11,7 +11,7 @@ head
 	link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto:100')
 	link(rel='stylesheet', href='/css/drive.css')
 body
-	nav
+	nav.hide
 		a
 			i.fa.fa-bars
 	aside#sidebar
@@ -38,12 +38,13 @@ body
 			#lblPhone
 	main
 		article#start-page
-			img(src='img/ios-karta.png', alt='exempel')
+			img#preview(src='img/ios-karta.png', alt='preview')
 			section
 				header
-					h1 
+					h1.logo
 						img(src='img/trade-marker.png', alt='logo')
-						|BesiktaNu
+						|Besikta
+						b Nu
 					p Det självklara valet när du behöver fordonsbesiktning
 				p Hitta en besiktningsutförare nära dig på ett enkelt och smidigt sätt!
 

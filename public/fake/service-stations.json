@@ -4,10 +4,16 @@
 	"adr": {
 		"street": "Solnavägen 15"
 	},
-	"hours": [
-		"Mån - Fre: 07:00--19:00",
-		"Lör: stängt",
-		"Sön: stängt"
+	"hours": {
+		"opened": [
+			"Mån - Fre: 07:00--19:00",
+			"Lör: stängt",
+			"Sön: stängt"
+		],
+		"dropin": []
+	},
+	"vehicleTypes": [
+		"PB"
 	],
 	"booking": {
 		"phone": "010-455 31 80",
@@ -24,10 +30,16 @@
 	"adr": {
 		"street": "Hemvärnsgatan 11"
 	},
-	"hours": [
-		"Mån - Fre: 08:00--17:00",
-		"Lör: stängt",
-		"Sön: stängt"
+	"hours": {
+		"opened": [
+			"Mån - Fre: 08:00--17:00",
+			"Lör: stängt",
+			"Sön: stängt"
+		],
+		"dropin": []
+	},
+	"vehicleTypes": [
+		"PB"
 	],
 	"booking": {
 		"phone": "077-144 14 41",
@@ -44,10 +56,16 @@
 	"adr": {
 		"street": "Tegelvägen 22"
 	},
-	"hours": [
-		"Mån - Fre: 08:00--17:00",
-		"Lör: stängt",
-		"Sön: stängt"
+	"hours": {
+		"opened": [
+			"Mån - Fre: 08:00--17:00",
+			"Lör: stängt",
+			"Sön: stängt"
+		],
+		"dropin": []
+	},
+	"vehicleTypes": [
+		"PB"
 	],
 	"booking": {
 		"phone": "077-144 14 41",
@@ -68,11 +86,17 @@
 	"adr": {
 		"street": "Teknikervägen 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 38", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.931208,
 		"lng": 17.936967
@@ -84,11 +108,17 @@
 	"adr": {
 		"street": "Hammarvägen 26"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 39", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 65.333270,
 		"lng": 21.420649
@@ -100,11 +130,17 @@
 	"adr": {
 		"street": "Stora Industriområdet"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 40", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 60.894972,
 		"lng": 15.148022
@@ -116,11 +152,17 @@
 	"adr": {
 		"street": "Fridhemsgatan 12"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 41", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.917617,
 		"lng": 16.630412
@@ -132,11 +174,17 @@
 	"adr": {
 		"street": "Industrivägen 14"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 42", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 60.625489,
 		"lng": 16.757870
@@ -148,11 +196,17 @@
 	"adr": {
 		"street": "Plåtvägen 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 43", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 64.733445,
 		"lng": 20.959483
@@ -164,11 +218,17 @@
 	"adr": {
 		"street": "Bangårdsgatan 5"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 44", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.394600,
 		"lng": 13.865281
@@ -180,11 +240,17 @@
 	"adr": {
 		"street": "Gamla vägen 5"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 45", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 63.163158,
 		"lng": 17.306622
@@ -196,11 +262,17 @@
 	"adr": {
 		"street": "Strömsätravägen 14"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 46", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.287142,
 		"lng": 17.930237
@@ -212,11 +284,17 @@
 	"adr": {
 		"street": "Selaövägen 13"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 47", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.261144,
 		"lng": 18.063558
@@ -228,11 +306,17 @@
 	"adr": {
 		"street": "Skattegårdsvägen 122"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 48", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.374559,
 		"lng": 17.858299
@@ -244,11 +328,17 @@
 	"adr": {
 		"street": "Lärlingsvägen 1"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 49", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 62.441454,
 		"lng": 17.329231
@@ -260,11 +350,17 @@
 	"adr": {
 		"street": "Norrgårdsgatan 3"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 50", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.839286,
 		"lng": 13.126205
@@ -276,11 +372,17 @@
 	"adr": {
 		"street": "Norrlandsvägen 35"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 51", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.141338,
 		"lng": 12.935095
@@ -292,11 +394,17 @@
 	"adr": {
 		"street": "Flygvägen 6"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 52", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 61.293192,
 		"lng": 17.067046
@@ -308,11 +416,17 @@
 	"adr": {
 		"street": "Forskargatan 17"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 53", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.203629,
 		"lng": 17.611214
@@ -324,11 +438,17 @@
 	"adr": {
 		"street": "Vallskogavägen 9"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 54", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 60.346027,
 		"lng": 17.527507
@@ -340,11 +460,17 @@
 	"adr": {
 		"street": "Per Uddénsväg 15"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 55", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 62.498779,
 		"lng": 17.323717
@@ -356,11 +482,17 @@
 	"adr": {
 		"street": "Strömgatan 10"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 56", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.520459,
 		"lng": 14.988259
@@ -372,11 +504,17 @@
 	"adr": {
 		"street": "Stockholmsvägen 102 "
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 57", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.438306,
 		"lng": 18.058187
@@ -388,11 +526,17 @@
 	"adr": {
 		"street": "Kemistvägen 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 58", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.448168,
 		"lng": 18.087385
@@ -404,11 +548,17 @@
 	"adr": {
 		"street": "Vistvägen 4"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 59", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.805703,
 		"lng": 13.408655
@@ -420,11 +570,17 @@
 	"adr": {
 		"street": "Obbolavägen 128"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 60", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 63.800296,
 		"lng": 20.280875
@@ -436,11 +592,17 @@
 	"adr": {
 		"street": "Mätarvägen 8"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 61", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 63.854509,
 		"lng": 20.208911
@@ -452,11 +614,17 @@
 	"adr": {
 		"street": "Kanalvägen 12"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 62", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.500145,
 		"lng": 17.927098
@@ -468,11 +636,17 @@
 	"adr": {
 		"street": "Truckvägen 22 "
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 63", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.515283,
 		"lng": 17.926320
@@ -484,11 +658,17 @@
 	"adr": {
 		"street": "Hållnäsgatan 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 64", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.877949,
 		"lng": 17.590196
@@ -500,11 +680,17 @@
 	"adr": {
 		"street": "Vammargatan 2A"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 65", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.209229,
 		"lng": 16.582879
@@ -516,11 +702,17 @@
 	"adr": {
 		"street": "Okvistavägen 30"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 66", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.529721,
 		"lng": 18.117206
@@ -532,11 +724,17 @@
 	"adr": {
 		"street": "Brogatan 13"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 67", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 64.281761,
 		"lng": 21.057225
@@ -548,11 +746,17 @@
 	"adr": {
 		"street": "≈byvägen 7"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 68", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.263893,
 		"lng": 15.162776
@@ -564,11 +768,17 @@
 	"adr": {
 		"street": "Chaufförvägen 26"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0775-50 03 69", 
 		"url": "http://bilprovning.se/Boka" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 63.171151,
 		"lng": 14.694689
@@ -580,11 +790,17 @@
 	"adr": {
 	 	"street": "Burskapsvägen 6"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.426103,
 		"lng": 15.833026
@@ -596,11 +812,17 @@
 	"adr": {
 	 	"street": "Industrigatan 9"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.040444,
 		"lng": 12.230946
@@ -612,11 +834,17 @@
 	"adr": {
 	 	"street": "Rungatan 14"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.873493,
 		"lng": 16.673118
@@ -628,11 +856,17 @@
 	"adr": {
 	 	"street": "Verkstadsgatan 18"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.718637,
 		"lng": 12.891203
@@ -644,11 +878,17 @@
 	"adr": {
 	 	"street": "Stenhusvägen 11D"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.425534,
 		"lng": 12.889677
@@ -660,11 +900,17 @@
 	"adr": {
 	 	"street": "Kvarnarpsvägen 6"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.658738,
 		"lng": 14.988876
@@ -676,11 +922,17 @@
 	"adr": {
 	 	"street": "Mått Johanssons väg 14"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.383803,
 		"lng": 16.495030
@@ -692,11 +944,17 @@
 	"adr": {
 	 	"street": "Nordmannagatan 6"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.181617,
 		"lng": 13.570387
@@ -708,11 +966,17 @@
 	"adr": {
 	 	"street": "Levertorpsvägen 1"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.701594,
 		"lng": 15.809011
@@ -724,11 +988,17 @@
 	"adr": {
 	 	"street": "Terassvägen 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.290216,
 		"lng": 13.517517
@@ -740,11 +1010,17 @@
 	"adr": {
 	 	"street": "Klangfärgsgatan 12"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.663005,
 		"lng": 11.894986
@@ -756,11 +1032,17 @@
 	"adr": {
 	 	"street": "Datavägen 33-35"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.638841,
 		"lng": 11.961070
@@ -772,11 +1054,17 @@
 	"adr": {
 	 	"street": "Karlsbogårdsgatan 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.771409,
 		"lng": 11.992473
@@ -788,11 +1076,17 @@
 	"adr": {
 	 	"street": "Kristinehedsvägen 24"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.683509,
 		"lng": 12.890797
@@ -804,11 +1098,17 @@
 	"adr": {
 	 	"street": "Södra Kringelvägen 8"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.148702,
 		"lng": 13.777564
@@ -820,11 +1120,17 @@
 	"adr": {
 	 	"street": "Verkstadsgatan 5"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.855988,
 		"lng": 13.671121
@@ -836,11 +1142,17 @@
 	"adr": {
 	 	"street": "Hangarvägen 11"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.341042,
 		"lng": 14.499399
@@ -852,11 +1164,17 @@
 	"adr": {
 	 	"street": "Blockgatan 19"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.388185,
 		"lng": 13.473531
@@ -868,11 +1186,17 @@
 	"adr": {
 	 	"street": "Fordonsgatan 6"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.497215,
 		"lng": 12.681726
@@ -884,11 +1208,17 @@
 	"adr": {
 	 	"street": "Ravingatan 5"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.130926,
 		"lng": 13.114971
@@ -900,11 +1230,17 @@
 	"adr": {
 	 	"street": "Blekingevägen 102"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.027259,
 		"lng": 14.212274
@@ -916,11 +1252,17 @@
 	"adr": {
 	 	"street": "Hantverksgatan 32"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.479061,
 		"lng": 12.082760
@@ -932,11 +1274,17 @@
 	"adr": {
 	 	"street": "Ramgatan 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.870919,
 		"lng": 12.871750
@@ -948,11 +1296,17 @@
 	"adr": {
 	 	"street": "Truvegatan 6"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.496331,
 		"lng": 13.189292
@@ -964,11 +1318,17 @@
 	"adr": {
 	 	"street": "Bonnorpsgatan 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.430311,
 		"lng": 15.600566
@@ -980,11 +1340,17 @@
 	"adr": {
 	 	"street": "Fyrfatsvägen 1"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.690223,
 		"lng": 13.095314
@@ -996,11 +1362,17 @@
 	"adr": {
 	 	"street": "Porfyrvägen10"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.693267,
 		"lng": 13.220390
@@ -1012,11 +1384,17 @@
 	"adr": {
 	 	"street": "Höstbruksvägen 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.719258,
 		"lng": 13.162514
@@ -1028,11 +1406,17 @@
 	"adr": {
 	 	"street": "Volframgatan 5"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.589964,
 		"lng": 13.036157
@@ -1044,11 +1428,17 @@
 	"adr": {
 	 	"street": "Källvattengatan 7"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.605750,
 		"lng": 13.073081
@@ -1060,11 +1450,17 @@
 	"adr": {
 	 	"street": "Linköpingsvägen 6"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.336504,
 		"lng": 15.157585
@@ -1076,11 +1472,17 @@
 	"adr": {
 	 	"street": "Turbinvägen 1"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.556531,
 		"lng": 15.059403
@@ -1092,11 +1494,17 @@
 	"adr": {
 	 	"street": "Argongatan 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.639505,
 		"lng": 12.001039
@@ -1108,11 +1516,17 @@
 	"adr": {
 	 	"street": "Arkösundsvägen 3"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.582618,
 		"lng": 16.223151
@@ -1124,11 +1538,17 @@
 	"adr": {
 	 	"street": "Madesjövägen 4"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.741182,
 		"lng": 15.890796
@@ -1140,11 +1560,17 @@
 	"adr": {
 	 	"street": "Östra Ringvägen 294-3"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.259831,
 		"lng": 14.553311
@@ -1156,11 +1582,17 @@
 	"adr": {
 	 	"street": "Järntrådsvägen 1-3"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.739921,
 		"lng": 12.085535
@@ -1172,11 +1604,17 @@
 	"adr": {
 	 	"street": "Omloppsvägen 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.232691,
 		"lng": 15.262645
@@ -1188,11 +1626,17 @@
 	"adr": {
 	 	"street": "Mejselvägen 1"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.064909,
 		"lng": 11.867174
@@ -1204,11 +1648,17 @@
 	"adr": {
 	 	"street": "Bosarve 245"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.280862,
 		"lng": 18.474416
@@ -1220,11 +1670,17 @@
 	"adr": {
 	 	"street": "Industrigatan 10"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.512632,
 		"lng": 13.253820
@@ -1236,11 +1692,17 @@
 	"adr": {
 	 	"street": "Hantverkaregatan 3B"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.397112,
 		"lng": 14.657024
@@ -1252,11 +1714,17 @@
 	"adr": {
 	 	"street": "Industrivägen 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.061765,
 		"lng": 14.615126
@@ -1268,11 +1736,17 @@
 	"adr": {
 	 	"street": "Metallgatan 1"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.011253,
 		"lng": 14.954546
@@ -1284,11 +1758,17 @@
 	"adr": {
 	 	"street": "Fraktvägen 15"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.384333,
 		"lng": 13.115609
@@ -1300,11 +1780,17 @@
 	"adr": {
 	 	"street": "Bilprovarevägen 9"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.277997,
 		"lng": 12.319764
@@ -1316,11 +1802,17 @@
 	"adr": {
 	 	"street": "Gräskärrsvägen 17"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.355251,
 		"lng": 11.986235
@@ -1332,11 +1824,17 @@
 	"adr": {
 	 	"street": "Heljevedsvägen 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.254670,
 		"lng": 12.970000
@@ -1348,11 +1846,17 @@
 	"adr": {
 	 	"street": "Folkparksvägen 52"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.761838,
 		"lng": 16.605039
@@ -1364,11 +1868,17 @@
 	"adr": {
 	 	"street": "≈nghammargatan"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.600534,
 		"lng": 16.488198
@@ -1380,11 +1890,17 @@
 	"adr": {
 	 	"street": "Dragongatan 43"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 55.434580,
 		"lng": 13.838175
@@ -1396,11 +1912,17 @@
 	"adr": {
 	 	"street": "Furuhällsvägen 4"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 59.041857,
 		"lng": 12.714228
@@ -1412,11 +1934,17 @@
 	"adr": {
 	 	"street": "Terminalgatan 4 "
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 57.166012,
 		"lng": 15.361117
@@ -1428,11 +1956,17 @@
 	"adr": {
 	 	"street": "Bäckgatan 14"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 58.213040,
 		"lng": 15.986532
@@ -1444,11 +1978,17 @@
 	"adr": {
 	 	"street": "Industrigatan 2"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.538440,
 		"lng": 14.133740
@@ -1460,11 +2000,17 @@
 	"adr": {
 	 	"street": "Älvdalsgatan 5"
 	},
+	"vehicleTypes": [
+		"PB"
+	],
 	"booking": {
 		"phone": "0774-400 800", 
 		"url": "https://besikta.se/bokning/" 
 	},
-	"hours": [],
+	"hours": {
+		"opened": [],
+		"dropin": []
+	},
 	"coords": {
 		"lat": 56.254703,
 		"lng": 12.907839

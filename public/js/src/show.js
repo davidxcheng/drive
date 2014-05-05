@@ -15,7 +15,7 @@ module.exports = (function() {
 
 			stationName.innerText = station.name;
 			stationStreetAdr.innerText = station.adr.street;
-			stationHours.innerHTML = station.hours.reduce(function(concat, item) {
+			stationHours.innerHTML = station.hours.opened.reduce(function(concat, item) {
 				return concat + '<li>' + item + '</li>';
 			}, '');
 			btnBook.href = station.booking.url;

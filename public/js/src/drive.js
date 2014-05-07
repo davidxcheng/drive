@@ -48,6 +48,10 @@ function init() {
 
 	function initMap(center, stations, selector) {
 		var options = {
+			panControl: false,
+			zoomControlOptions: {
+				position: google.maps.ControlPosition.TOP_RIGHT
+			},
 			mapTypeId: google.maps.MapTypeId.ROADMAP // MAP | SATTELITE | ROADMAP
 		};
 		var map = new google.maps.Map(document.getElementById(selector), options);

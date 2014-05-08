@@ -15,10 +15,14 @@ main {
 }
 #start-page {
   height: 100%;
+  margin: 12px 6px;
+}
+#start-page #preview {
+  display: none;
 }
 #start-page .logo {
-  margin: -6px;
-  font: bold 4.8rem 'Helvetica Neue', sans-serif;
+  margin-bottom: 6px;
+  font: bold 3.8rem 'Helvetica Neue', sans-serif;
   color: #6a6a6a;
 }
 #start-page .logo b {
@@ -29,7 +33,7 @@ main {
   margin-top: -10px;
 }
 #start-page p {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   margin-bottom: 1.2rem;
 }
 #map {
@@ -124,6 +128,28 @@ main {
   padding: 0 12px;
   margin: 6px 0 0 6px;
 }
+@media screen and (min-width: 720px) {
+  #start-page {
+    position: relative;
+    width: 800px;
+    margin: 20px auto;
+  }
+  #start-page #preview {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #start-page section {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    margin: 108px 0 0 32px;
+  }
+  #mapSearch {
+    margin-left: 272px;
+  }
+}
 @media screen and (min-width: 900px) {
   #start-page {
     position: relative;
@@ -140,5 +166,8 @@ main {
     top: 0;
     left: 300px;
     margin: 108px 0 0 32px;
+  }
+  #mapSearch {
+    width: 400px;
   }
 }

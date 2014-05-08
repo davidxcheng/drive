@@ -22,10 +22,14 @@ main
 
 #start-page
 	height 100%
+	margin 12px 6px
+
+	#preview
+		display none
 
 	.logo
-		margin -6px
-		font bold 4.8rem $logo-font
+		margin-bottom 6px
+		font bold 3.8rem $logo-font
 		color #6a6a6a
 		b
 			font-weight normal
@@ -34,7 +38,7 @@ main
 			margin-top -10px
 
 	p
-		font-size 2.4rem
+		font-size 1.8rem
 		margin-bottom 1.2rem
 
 #map
@@ -128,6 +132,27 @@ main
 	padding 0 12px
 	margin 6px 0 0 6px
 
+
+@media screen and (min-width: 720px)
+	#start-page
+		position relative
+		width 800px
+		margin 20px auto
+
+		#preview
+			display inline
+			position absolute
+			top 0
+			left 0
+		section
+			position absolute
+			top 0
+			left 300px
+			margin: 108px 0 0 32px;
+
+	#mapSearch
+		margin-left 272px
+
 @media screen and (min-width: 900px)
 	#start-page
 		position relative
@@ -143,3 +168,6 @@ main
 			top 0
 			left 300px
 			margin: 108px 0 0 32px;
+
+	#mapSearch
+		width 400px

@@ -6,6 +6,5 @@ var page = require('page'),
 	page('/karta', drive.init);
 
 $(document).ready(function() {
-	//drive.init();
 	page.start();
 });

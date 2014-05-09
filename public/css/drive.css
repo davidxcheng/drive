@@ -48,7 +48,9 @@ main {
 }
 #sidebar {
   position: absolute;
+  -webkit-transition: transform 0.3s;
   transition: transform 0.3s;
+  -webkit-transform: translatex(-260px);
   transform: translatex(-260px);
   top: 0;
   z-index: 2;
@@ -117,6 +119,7 @@ main {
   font-size: 2.4rem;
 }
 #sidebar.show-sidebar {
+  -webkit-transform: translatex(0);
   transform: translatex(0);
 }
 #mapSearch {

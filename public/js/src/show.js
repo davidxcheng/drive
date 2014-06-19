@@ -9,6 +9,27 @@ module.exports = (function() {
 		lblPhone.classList.remove('hide');
 	});
 
+	var startx, starty;
+	sidebar.addEventListener('touchstart', function(e) {
+		var to = e.changedTouches[0];
+		startx = parseInt(to.clientX);
+		starty = to.clientY;
+		odo.innerText = 'start';
+	});
+
+	sidebar.addEventListener('touchmove', function(e) {
+		var touchObject = e.changedTouches[0];
+		odo.innerText = +touchObject.clientX - startx;
+	});
+
+	sidebar.addEventListener('touchend', function(e) {
+		var touchObject = e.changedTouches[0];
+
+		if ((+touchObject.clientX - startx) < -9) {
+			sidebar.classList.remove('show-sidebar');
+		}
+	});
+
 	return {
 		details: function(station) {
 			lblPhone.classList.add('hide');

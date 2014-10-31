@@ -1,5 +1,5 @@
 var	http 	= require('http');
-/*var express = require('express');
+var express = require('express');
 
 var app = express();
 
@@ -23,14 +23,15 @@ app.get('*', function(req, res){
 	res.render('index', { title: 'BesiktaNu - Hitta fordonsbesiktning nära dig' });
 });
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 4500;
 http.createServer(app).listen(port, function(){
 	//console.log('Listening on port %s', port);
-});*/
+});
 
-var port = process.env.PORT || 1234;
+/*
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello World\n');
 }).listen(port, '0.0.0.0');
+*/

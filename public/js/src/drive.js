@@ -5,8 +5,9 @@ function init() {
 		currentPositionMarker = null,
 		stations = null;
 
-	request.get('fake/service-stations.json', function(res) {
-		stations = res.body;
+	request.get('fake/service-stations.js', function(res) {
+		stations = eval(res.text);
+		console.dir(res);
 	});
 
 	if (!navigator.geolocation)

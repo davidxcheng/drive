@@ -28,7 +28,9 @@ http.createServer(app).listen(port, function(){
 	//console.log('Listening on port %s', port);
 });*/
 
+var port = process.env.PORT || 1234;
+
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello World\n');
-}).listen(80, '0.0.0.0');
+}).listen(port, '0.0.0.0');

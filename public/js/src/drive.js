@@ -6,7 +6,7 @@ function init() {
 		stations = null;
 
 	request.get('fake/service-stations.json', function(res) {
-		stations = res.body;
+		stations = eval(res.text);
 	});
 
 	if (!navigator.geolocation)

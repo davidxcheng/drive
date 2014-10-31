@@ -1,5 +1,5 @@
-var express = require('express'),
-	http 	= require('http');
+var	http 	= require('http');
+/*var express = require('express');
 
 var app = express();
 
@@ -26,4 +26,9 @@ app.get('*', function(req, res){
 var port = process.env.PORT || 80;
 http.createServer(app).listen(port, function(){
 	//console.log('Listening on port %s', port);
-});
+});*/
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(80, '0.0.0.0');

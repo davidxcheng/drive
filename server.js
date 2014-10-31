@@ -23,7 +23,7 @@ app.get('*', function(req, res){
 	res.render('index', { title: 'BesiktaNu - Hitta fordonsbesiktning nära dig' });
 });
 
-var port = process.env.PORT || 4500;
+var port = process.env.PORT || 80;
 http.createServer(app).listen(port, function(){
 	console.log('Listening on port %s', port);
 });

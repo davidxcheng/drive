@@ -20,9 +20,10 @@ app.use(stylus.middleware({
 app.use(express.static(__dirname + '/public'));
 
 app.get('*', function(req, res){
-	res.render('index', { title: 'drive' });
+	res.render('index', { title: 'BesiktaNu - Hitta fordonsbesiktning nära dig' });
 });
 
-http.createServer(app).listen(4500, function(){
-	console.log('Listening on port 4500');
+var port = process.env.PORT || 80;
+http.createServer(app).listen(port, function(){
+	console.log('Listening on port %s', port);
 });
